@@ -1,0 +1,762 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <title>Heights Philadelphia | Application</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+
+
+    <link rel="icon" href="https://heights.org/wp-content/uploads/2020/12/cropped-heights-favicon2-32x32.png" sizes="32x32" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/jquery-input-mask-phone-number@1.0.0/dist/jquery-input-mask-phone-number.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+    <script>
+        function timestamp() {
+            var response = document.getElementById("g-recaptcha-response");
+            if (response == null || response.value.trim() == "") {
+                var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+                elems["ts"] = JSON.stringify(new Date().getTime());
+                document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
+            }
+        } setInterval(timestamp, 500);
+    </script>
+
+
+    <script type="text/javascript">
+
+        function myRelation() {
+            var checkBox = document.getElementById("00N3h00000J3LFE");
+            var option = document.getElementById("relationOption");
+
+            if (checkBox.checked == true) {
+                document.getElementById("00N3h00000J3LFJ").value = "";
+                option.style.display = "block";
+
+
+            } else {
+                document.getElementById("00N3h00000J3LFJ").value = "";
+                option.style.display = "none";
+
+
+            }
+        }
+        $(function () {
+            $("").datepicker();
+
+        });
+
+        $(function () {
+            $("#00N3h00000IvhcY").datepicker({
+                autoclose: true,
+                todayHighlight: true
+            }).datepicker('update', new Date());
+        });
+
+        var todaydate = new Date();
+        var day = todaydate.getDate();
+        var month = todaydate.getMonth() + 1;
+        var year = todaydate.getFullYear();
+        var datestring = month + "/" + day + "/" + year;
+        window.onload = function () {
+            document.getElementById("00N3h00000IvhmY").value = datestring;
+        }
+
+        $(document).ready(function () {
+            $('#mobile').usPhoneFormat({
+                format: '(xxx) xxx-xxxx',
+            });
+            $('#00N3h00000J3LHK').usPhoneFormat({
+                format: '(xxx) xxx-xxxx',
+            });
+        });
+
+        function recaptchaCallback() {
+            $('#submitBtn').removeAttr('disabled');
+        };
+
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(180deg, rgba(211,169,21,1) 0%, rgba(213,128,20,1) 35%, rgba(210,90,36,1) 100%);
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            float: left;
+            width: 50%;
+            padding: 20px;
+            height: 300px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .form-group.required .control-label:after {
+            content: "*";
+            color: white;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <!--Head of page-->
+    <header>
+        <div id="head" class="headImage" style=" background-image: url('Pictures/heightsBlue.png'); margin-left:15px; height: 180px; background-size: 23%; background-repeat: no-repeat; background-size: contain;">
+        </div><br />
+        <center>
+            <h4 style="color: white; font-size: 14px;">Thank you for your interest in Heights Philadelphia programs. We appreciate you taking the time to fill out this form. If you have a technical issue, please email <a href="mailto: nthuestad@heights.org.">nthuestad@steppingstonescholars.org</a></h4>
+        </center>
+    </header>
+    
+
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+    <form id="frmApplication" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+
+        <input type=hidden name='captcha_settings' value='{"keyname":"Web_to_Leads_reCAPTCHA","fallback":"true","orgId":"00D3h000005Wlk9","ts":""}'>
+        <input type=hidden name="oid" value="00D3h000005Wlk9">
+        <input type=hidden name="retURL" value="http://heights.org">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card" style="background-color: rgba(0,0,0,.0); color: #fff;">
+
+                        <div class="card-body form-group required">
+                            <h4 style="text-decoration: underline; color: #000018;">Student Information</h4>
+
+
+                            <label for="first_name" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">First Name </label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" class="form-control" required><br>
+
+
+                            <label for="last_name" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Last Name </label><input id="last_name" maxlength="80" name="last_name" size="20" type="text" class="form-control" required /><br>
+
+                            <label for="preferred_name" style="font-size: 15px; color: darkblue; font-weight: bold;">Preferred Name </label><input id="00N3h00000IvhcE" maxlength="18" name="00N3h00000IvhcE" size="20" type="text" class="form-control" /><br>
+
+                            <label for="mobile" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label"> Mobile </label><input id="mobile" maxlength="40" name="mobile" size="20" type="text" class="form-control" placeholder="(xxx) xxx-xxxx" required /><br />
+
+                            <label for="personal_email" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Personal Email </label><input id="00N3h00000Ivhkr" maxlength="80" name="00N3h00000Ivhkr" size="20" type="text" class="form-control" required /><br>
+
+                            <label for="school_email" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">School Email </label><input id="00N3h00000J3LEp" maxlength="80" name="00N3h00000J3LEp" size="20" type="text" class="form-control" required /><br>
+
+                            <label for="street" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Street Address </label><input name="street" class="form-control" required /><br>
+
+                            <label for="city" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">City </label><input id="city" name="city" type="text" class="form-control" required /><br>
+
+                            <label for="state" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">State/Province </label>
+                            <select id="state" name="state" class="form-control" required>
+                                <option value="none">--None--</option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="DC">District Of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>>
+                            </select><br>
+
+                            <label for="zip" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Zip </label><input id="zip" class="form-control" name="zip" type="text" required /><br />
+                            <label for="birthdate" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Birthdate </label><span class="dateInput dateOnlyInput"><input id="00N3h00000IvhcY" name="00N3h00000IvhcY" maxlength="10" size="12" type="text" onkeydown="this.value=this.value.replace(/^(\d\d)(\d)$/g,'$1/$2').replace(/^(\d\d\/\d\d)(\d+)$/g,'$1/$2').replace(/[^\d\/]/g,'')" class="form-control" required /></span><br>
+
+                            <label style="font-size: 15px; color: darkblue; font-weight: bold;" for="gender" class="control-label">Gender </label>
+                            <select id="00N3h00000IvhcJ" name="00N3h00000IvhcJ" title="Gender" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Non Binary">Non Binary</option>
+                                <option value="Prefer Not To Say">Prefer Not To Say</option>
+                            </select><br>
+
+                            <label style="font-size: 15px; color: darkblue; font-weight: bold;" for="pronouns" class="control-label">Pronouns </label>
+                            <select id="00N3h00000IvhcO" name="00N3h00000IvhcO" title="Pronouns" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="he/him/his">he/him/his</option>
+                                <option value="He/Him/His and They/Them/Theirs">He/Him/His and They/Them/Theirs</option>
+                                <option value="other/ask me">other/ask me</option>
+                                <option value="she/her/hers">she/her/hers</option>
+                                <option value="She/Her/Hers and They/Them/Theirs">She/Her/Hers and They/Them/Theirs</option>
+                                <option value="they/them/theirs">they/them/theirs</option>
+                            </select><br>
+
+                            <label style="font-size: 15px; color: darkblue; font-weight: bold;" for="Ethnicity" class="control-label">Ethnicity </label>
+                            <select id="00N3h00000J3LEa" name="00N3h00000J3LEa" title="Ethnicity" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="Hispanic/Latino">Hispanic/Latino</option>
+                                <option value="Non-hispanic/Latino">Non-hispanic/Latino</option>
+                                <option value="Prefer Not to Answer">Prefer Not to Answer</option>
+                                <option value="Unsure">Unsure</option>
+                            </select><br>
+
+                            <label style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label" for="Identified Race">Identified Race (check all that apply) </label><br />
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LFx" name="00N3h00000J3LFx" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">White</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LFn" name="00N3h00000J3LFn" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Black</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LG2" name="00N3h00000J3LG2" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">African American</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LFs" name="00N3h00000J3LFs" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Black African</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LG7" name="00N3h00000J3LG7" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Central Asian</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGC" name="00N3h00000J3LGC" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">East Asian</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGH" name="00N3h00000J3LGH" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">South Asian</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGM" name="00N3h00000J3LGM" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Southeast Asian</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGR" name="00N3h00000J3LGR" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Asian</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGW" name="00N3h00000J3LGW" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Middle Eastern</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGb" name="00N3h00000J3LGb" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Latino/a/x</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGg" name="00N3h00000J3LGg" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Native American</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGl" name="00N3h00000J3LGl" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Multiracial/Two or More Races</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGq" name="00N3h00000J3LGq" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Native Hawaiian or Other Pacific Islander</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LGv" name="00N3h00000J3LGv" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Prefer Not To Answer</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                            </div><br />
+
+                            <label style="font-size: 15px; color: darkblue; font-weight: bold;" for="HSGraduation" class="control-label">High School Year of Graduation </label>
+                            <select id="00N3h00000J3LJB" name="00N3h00000J3LJB" title="HS YOG" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="1990">1990</option>
+                                <option value="1991">1991</option>
+                                <option value="1992">1992</option>
+                                <option value="1993">1993</option>
+                                <option value="1994">1994</option>
+                                <option value="1995">1995</option>
+                                <option value="1996">1996</option>
+                                <option value="1997">1997</option>
+                                <option value="1998">1998</option>
+                                <option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2031</option>
+                                <option value="2032">2032</option>
+                                <option value="2033">2033</option>
+                                <option value="2034">2034</option>
+                                <option value="2035">2035</option>
+                                <option value="2036">2036</option>
+                                <option value="2037">2037</option>
+                                <option value="2038">2038</option>
+                                <option value="2039">2039</option>
+                                <option value="2040">2040</option>
+                            </select><br>
+
+                            <label style="font-size: 15px; color: darkblue; font-weight: bold;" for="currentSchool" class="control-label">Current School </label><input id="00N3h00000J3LEk" maxlength="100" name="00N3h00000J3LEk" size="20" type="text" class="form-control" required /><br>
+
+                            <label style="font-size: 15px; color: darkblue; font-weight: bold;" for="studentID" class="control-label">SDP Student ID </label><input id="00N3h00000J3LEf" maxlength="15" name="00N3h00000J3LEf" size="20" type="text" class="form-control" required /><br>
+
+                            <label for="relation" style="font-size: 15px; color: darkblue; font-weight: bold;">Are your related to anyone at Heights? </label>
+                            <br>
+
+                            <label style="border-style: groove; background-color: #00b300; border-color: #00b300; ">
+                                <input id="00N3h00000J3LFE" name="00N3h00000J3LFE" type="checkbox" value="1" style="margin-left: 10px; width:15px; height:15px;" class="material-control-input" onclick="myRelation()" />
+                                <span class="material-control-indicator"></span>
+                                <span class="material-control-description" style="font-size: 15px; margin-right: 10px; ">Yes</span>
+                            </label><br />
+
+                            <div id="relationOption" style="display: none;">
+                                <div id="relationName">
+                                    <label for="relationName" style="font-size: 15px; color: darkblue; font-weight: bold;">Names of relatives and relationship to applicant </label> <input id="00N3h00000J3LFJ" name="00N3h00000J3LFJ" rows="3" type="text" wrap="soft" class="form-control" />
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <label for="lang" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Home Language </label>
+                            <select id="00N3h00000J3LF4" name="00N3h00000J3LF4" title="Home Language" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="Ahmarina">Ahmarina</option>
+                                <option value="Albanian">Albanian</option>
+                                <option value="Amharic">Amharic</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="Bamana">Bamana</option>
+                                <option value="Bangla">Bangla</option>
+                                <option value="Belarusian">Belarusian</option>
+                                <option value="Bengali">Bengali</option>
+                                <option value="Cambodian">Cambodian</option>
+                                <option value="Cantonese">Cantonese</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Creole">Creole</option>
+                                <option value="Dari Persian">Dari Persian</option>
+                                <option value="English">English</option>
+                                <option value="Filipino">Filipino</option>
+                                <option value="French">French</option>
+                                <option value="Fujianese">Fujianese</option>
+                                <option value="Fulani">Fulani</option>
+                                <option value="Fuzhounese">Fuzhounese</option>
+                                <option value="Garifuna">Garifuna</option>
+                                <option value="Haitian Creole">Haitian Creole</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Igbo">Igbo</option>
+                                <option value="Indonesian">Indonesian</option>
+                                <option value="Izon">Izon</option>
+                                <option value="Karen">Karen</option>
+                                <option value="Khmer">Khmer</option>
+                                <option value="Lao">Lao</option>
+                                <option value="Malayalam">Malayalam</option>
+                                <option value="Mandarin">Mandarin</option>
+                                <option value="Mandingo">Mandingo</option>
+                                <option value="Moroccan">Moroccan</option>
+                                <option value="Oromo">Oromo</option>
+                                <option value="Pashto">Pashto</option>
+                                <option value="Patois">Patois</option>
+                                <option value="Polish">Polish</option>
+                                <option value="Portuguese">Portuguese</option>
+                                <option value="Punjabi">Punjabi</option>
+                                <option value="Russian">Russian</option>
+                                <option value="Serbo-Croatian">Serbo-Croatian</option>
+                                <option value="Soninke">Soninke</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Tajik">Tajik</option>
+                                <option value="Thai">Thai</option>
+                                <option value="Tigrina">Tigrina</option>
+                                <option value="Tigrinya">Tigrinya</option>
+                                <option value="Twi">Twi</option>
+                                <option value="Ukrainian">Ukrainian</option>
+                                <option value="Urdu">Urdu</option>
+                                <option value="Uzbek">Uzbek</option>
+                                <option value="Vietnamese">Vietnamese</option>
+                                <option value="Wolof">Wolof</option>
+                                <option value="Yoruba">Yoruba</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card" style="background-color: rgba(0,0,0,.0); color: #fff;">
+
+                        <div class="card-body form-group required">
+                            <h4 style="text-decoration: underline; color: #000018;">Household Information</h4>
+
+                            <label for="parent1first" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Parent/Guardian 1 First Name </label><input id="00N3h00000J3LH5" maxlength="200" name="00N3h00000J3LH5" size="20" type="text" class="form-control" required /><br>
+
+                            <label for="parent1last" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Parent/Guardian 1 Last Name </label><input id="00N3h00000J3LHA" maxlength="200" name="00N3h00000J3LHA" size="20" type="text" class="form-control" required /><br>
+
+                            <label for="parent1pre" style="font-size: 15px; color: darkblue; font-weight: bold;">Parent/Guardian 1 Preferred Name </label><input id="00N3h00000J3LGw" maxlength="200" name="00N3h00000J3LGw" size="20" type="text" class="form-control" /><br>
+
+                            <label for="" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Parent/Guardian 1 Mobile </label>
+                            <input id="00N3h00000J3LHK" maxlength="40" name="00N3h00000J3LHK" onkeydown="formatPhoneOnEnter(this, event);" size="20" type="text" placeholder="(xxx) xxx-xxxx" class="form-control" required /><br>
+
+                            <label for="" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Parent/Guardian 1 Email </label>
+                            <input id="00N3h00000J3LHF" maxlength="80" name="00N3h00000J3LHF" size="20" type="text" class="form-control" required /><br>
+
+                            <label for="" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Parent/Guardian 1 Marital Status </label>
+                            <select id="00N3h00000J3LHP" name="00N3h00000J3LHP" title="Parent/Guardian 1 Marital Status" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="Divorced">Divorced</option>
+                                <option value="Married">Married</option>
+                                <option value="Never Married">Never Married</option>
+                                <option value="Separated (Married but living apart)">Separated (Married but living apart)</option>
+                                <option value="Single">Single</option>
+                                <option value="Widow/Widower">Widow/Widower</option>
+                                <option value="Prefer Not To Answer">Prefer Not To Answer</option>
+                            </select><br>
+
+                            <label for="relation" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Parent/Guardian 1 Relationship to Student </label>
+                            <select id="00N3h00000J3LHU" name="00N3h00000J3LHU" title="PG 1 Relationship to Student" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="Aunt">Aunt</option>
+                                <option value="Child">Child</option>
+                                <option value="Cousin">Cousin</option>
+                                <option value="Coworker">Coworker</option>
+                                <option value="Employee">Employee</option>
+                                <option value="Employer">Employer</option>
+                                <option value="Father">Father</option>
+                                <option value="Friend">Friend</option>
+                                <option value="Grandchild">Grandchild</option>
+                                <option value="Grandparent">Grandparent</option>
+                                <option value="Guardian">Guardian</option>
+                                <option value="Mentee">Mentee</option>
+                                <option value="Mentor">Mentor</option>
+                                <option value="Mother">Mother</option>
+                                <option value="Parent">Parent</option>
+                                <option value="Partner/Spouse">Partner/Spouse</option>
+                                <option value="Referee">Referee</option>
+                                <option value="Reference">Reference</option>
+                                <option value="Sibling">Sibling</option>
+                                <option value="Step-Parent">Step-Parent</option>
+                                <option value="Tutee">Tutee</option>
+                                <option value="Tutor">Tutor</option>
+                                <option value="Uncle">Uncle</option>
+                            </select><br>
+
+                            <label for="" style="font-size: 15px; color: darkblue; font-weight: bold;">Is PG 1 the best emergency contact? </label><br />
+                            <label style="border-style: groove; background-color: #00b300; border-color: #00b300; ">
+                                <input id="00N3h00000J3LIr" name="00N3h00000J3LIr" type="checkbox" value="1" style="margin-left: 10px; width:15px; height:15px;" class="material-control-input">
+                                <span class="material-control-indicator"></span>
+                                <span class="material-control-description" style="font-size: 15px; margin-right: 10px; ">Yes</span>
+                            </label><br><br>
+
+                            <label for="" style="font-size: 15px; color: darkblue; font-weight: bold;"><span class="control-label">Are you a First Generation College Student? </span><br /><span style="font-size: 12px; color: white; font-weight: bold;">(Select “No” if one or both Parent(s)/Guardian(s) have graduated with at least a 4 year degree from a College/University in the US. Select “Yes” if that is not the case)</span> </label>
+                            <select id="00N3h00000J3LEu" name="00N3h00000J3LEu" title="First Gen College" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select><br>
+
+                            <label for="" style="font-size: 15px; color: darkblue; font-weight: bold;"> <span class="control-label">Household Size </span> <br /> <span style="font-size: 12px; color: white; font-weight: bold;"> (Number of people in your household including yourself) </span> </label><input id="00N3h00000J3LFd" name="00N3h00000J3LFd" size="20" type="text" class="form-control" required /><br>
+
+                            <label for="" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Household Income </label>
+                            <select id="00N3h00000J3LFi" name="00N3h00000J3LFi" title="Household Income" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="Less than 20,000 a year">Less than 20,000 a year</option>
+                                <option value="Between 20,001 and 35,000 a year">Between 20,001 and 35,000 a year</option>
+                                <option value="Between 35,001 and 50,000 a year">Between 35,001 and 50,000 a year</option>
+                                <option value="Between 50,001 and 75,000 a year">Between 50,001 and 75,000 a year</option>
+                                <option value="Between 75,001 and 100,000 a year">Between 75,001 and 100,000 a year</option>
+                                <option value="Between 100,001 and 115,000 a year">Between 100,001 and 115,000 a year</option>
+                                <option value="Over 115,001 a year">Over 115,001 a year</option>
+                                <option value="No Selection for household income">No Selection for household income</option>
+                            </select><br>
+
+                            <label for="" style="font-size: 15px; color: darkblue; font-weight: bold;" class="control-label">Are you eligible for Free/Reduced Lunch? </label><br />
+                            <select id="00N3h00000J3LEz" name="00N3h00000J3LEz" title="Free/Reduced Lunch" class="form-control" required>
+                                <option value="">--None--</option>
+                                <option value="Eligible For Free/Reduced Lunch">Eligible For Free/Reduced Lunch</option>
+                                <option value="Not Eligible for Free/Reduced Lunch">Not Eligible for Free/Reduced Lunch</option>
+                                <option value="Chose not to provide an answer">Chose not to provide an answer</option>
+                            </select><br>
+
+                            <label for="" style="font-size: 15px; color: darkblue; font-weight: bold;">Does anyone in the household receive Unemployement Benefits? </label><br />
+                            <label style="border-style: groove; border-color: #00b300; background-color: #00b300; ">
+                                <input id="00N3h00000J3LHZ" name="00N3h00000J3LHZ" type="checkbox" value="1" style="margin-left: 10px; width:15px; height:15px;" class="material-control-input">
+                                <span class="material-control-indicator"></span>
+                                <span class="material-control-description" style="font-size: 15px; margin-right: 10px; ">Yes</span>
+                            </label><br><br>
+
+                            <label style="font-size: 15px; color: darkblue; font-weight: bold;" for="Household Supports">Household Supports (check all that apply) </label><br />
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <label>
+                                            <input id="00N3h00000J3LHe" name="00N3h00000J3LHe" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">SNAP/Food Stamps</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LHj" name="00N3h00000J3LHj" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Medicaid</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LHo" name="00N3h00000J3LHo" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">SSI</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LHt" name="00N3h00000J3LHt" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Social Security Disability/SSD</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label class="">
+                                            <input id="00N3h00000J3LHy" name="00N3h00000J3LHy" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Survivor</span>
+                                        </label>
+
+                                    </div>
+                                    <div class="col-sm">
+                                        <label>
+                                            <input id="00N3h00000J3LI3" name="00N3h00000J3LI3" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">Retirement</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <label>
+                                            <input id="00N3h00000J3LI8" name="00N3h00000J3LI8" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">LIHEAP (Heat Assistance)</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label>
+                                            <input id="00N3h00000J3LFe" name="00N3h00000J3LFe" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">LIWAP (Water Assistance)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-sm">
+                                        <label>
+                                            <input id="00N3h00000J3LI9" name="00N3h00000J3LI9" type="checkbox" value="1" />
+                                            <span class="material-control-indicator"></span>
+                                            <span class="material-control-description" style="font-size: 12px;">TANF (Cash Assistance)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div><br />
+
+
+                            <label for="addinfo" style="font-size: 15px; color: darkblue; font-weight: bold;"> <span class="control-label">Additional Info </span><br /><span style="font-size: 12px; color: white; font-weight: bold;">(Please provide the name of the program you are applying for or what you are interested in. If you are not sure, tell us more about your academic, college or career goals. You can also use this space to expand on how you identify your gender, pronouns, ethnicity, race or home languages if those fields were not able to capture all of your information)</span> </label>
+                            <textarea id="00N3h00000J3LF9" name="00N3h00000J3LF9" rows="4" type="text" wrap="soft" class="form-control" style="width: 500px; height:200px;" required></textarea>
+
+
+
+
+                            <div class="row">
+
+
+                            </div>
+
+
+
+                            <div style="display: none;">
+                                <label for="recordType">Lead Record Type</label><select id="recordType" name="recordType">
+                                    <option value="0123h000000u1gJ">Program Participant Lead</option>
+                                </select><br>
+
+                                client (lead):<input id="00N3h00000J3LIN" name="00N3h00000J3LIN" type="checkbox" value="1" checked /><br>
+
+                                Primary Address Type:<select id="00N3h00000IvhnM" name="00N3h00000IvhnM" title="Primary Address Type">
+                                    <option value="Home">Home</option>
+                                </select><br>
+
+                                <label for="lead_source">Lead Source</label><select id="lead_source" name="lead_source">
+                                    <option value="Web-to-Leads">Web-to-Leads</option>
+                                </select><br>
+
+                                <label for="lead_source">Date application was received:</label><span class="dateInput dateOnlyInput"><input id="00N3h00000IvhmY" name="00N3h00000IvhmY" size="12" type="text" /></span><br>
+
+                            </div>
+
+
+                        </div>
+
+                    </div><br /><br />
+                    <div class="g-recaptcha" data-sitekey="6LdUKg8lAAAAACDoewO9Irz_dzIVYd_ouSwLsH7I" data-callback="recaptchaCallback" style="width:500px; float:right;"></div><br><br /><br /><br />
+
+                    <span id="captcha" style="color:red; font-size: 15px;"></span>
+
+                    <button id="submitBtn" style="font-size: 15px; margin-left:200px; color: rgba(210,90,36,1); height:50px; width: 200px;" class="btn btn-light" disabled>Submit Form</button>
+
+                </div>
+            </div>
+            <center>
+                <h4 style="color: white; font-size: 15px;">If selected for a program our staff will provide additional enrollment forms to be completed by the Student and/or the Parent/Guardian. Thank you!</h4>
+            </center><br />
+
+        </div>
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>
